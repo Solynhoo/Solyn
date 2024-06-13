@@ -11,9 +11,9 @@ export default defineAppConfig({
     header: {
       position: 'right',
       logo: {
-        path: '/logo.svg',
-        pathDark: '/logo-dark.svg',
-        alt: 'alpine'
+        path: '/assets/logo.webp',
+        pathDark: '/assets/logo-dark.webp',
+        alt: 'solyn'
       }
     },
     footer: {

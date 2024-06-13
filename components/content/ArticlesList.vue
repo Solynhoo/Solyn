@@ -24,12 +24,8 @@ const articles = computed(() => _articles.value || [])
     </div>
   </div>
   <div v-else class="tour">
-    <p>Seems like there are no articles yet.</p>
-    <p>
-      You can start by
-      <!-- eslint-disable-next-line -->
-      <ProseA href="https://alpine.nuxt.space/articles/write-articles">creating</ProseA> one in the <ProseCodeInline>articles</ProseCodeInline> folder.
-    </p>
+    <p><Icon name="ph:smiley-sad-duotone" /> Não existe nenhum artigo aqui...</p>
+    <p>Não existe nenhum artigo aqui, volte aqui mais tarde! 🙁</p>
   </div>
 </template>
 

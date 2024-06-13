@@ -1,12 +1,14 @@
 <template>
   <section>
+    <p class="status">
+      <Icon name="material-symbols:sad-tab" /> 404
+    </p>
+
     <p class="message">
       This page could not be found
     </p>
 
-    <p class="status">
-      404
-    </p>
+
 
     <NuxtLink to="/">
       Back to homepage

@@ -1,42 +1,44 @@
 import { createResolver, logger, defineNuxtModule } from '@nuxt/kit'
 import { $fetch } from 'ofetch'
-import { version } from './package.json'
 
 const { resolve } = createResolver(import.meta.url)
 
-// That allows to overwrite these dependencies paths via `.env` for local development
-const envModules = {
-  tokens: process?.env?.THEME_DEV_TOKENS_PATH || '@nuxt-themes/tokens',
-  elements: process?.env?.THEME_DEV_ELEMENTS_PATH || '@nuxt-themes/elements',
-  studio: process?.env?.THEME_DEV_STUDIO_PATH || '@nuxthq/studio',
-  typography: process?.env?.THEME_DEV_TYPOGRAPHY_PATH || '@nuxt-themes/typography'
-}
-
-const updateModule = defineNuxtModule({
-  meta: {
-    name: '@nuxt-themes/alpine'
-  },
-  setup (_, nuxt) {
-    if (nuxt.options.dev) {
-      $fetch('https://registry.npmjs.org/@nuxt-themes/alpine/latest').then((release) => {
-        if (release.version > version) {
-          logger.info(`A new version of Alpine (v${release.version}) is available: https://github.com/nuxt-themes/alpine/releases/latest`)
-        }
-      }).catch(() => {})
-    }
-  }
-})
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en'
+        lang: 'pt'
       }
     }
   },
-  extends: [envModules.typography, envModules.elements],
+  colorMode: {
+    preference: 'system',
+    fallback: 'dark'
+  },
+  site: {
+    url: 'https://solyn.xyz',
+    name: '🌱 Solyn',
+    description: '🌱 O meu site pessoal!',
+    defaultLocale: 'pt'
+  },
+  robots: {
+    disallow: ['/_src/', '/_nuxt/', '/_logs/', '/cdn-cgi/'],
+    blockNonSeoBots: true,
+    credits: false,
+    debug: true,
+    sitemap: ['/sitemap.xml']
+  },
+  schemaOrg: {
+    identity: {
+      type: 'Person',
+      name: '🌱 Solyn',
+      url: 'https://solyn.xyz',
+      logo: 'https://solyn.xyz/assets/avatar.png'
+    }
+  },
+  extends: ['@nuxt-themes/typography', '@nuxt-themes/elements'],
   runtimeConfig: {
     public: {
       FORMSPREE_URL: process.env.FORMSPREE_URL
@@ -44,10 +46,12 @@ export default defineNuxtConfig({
   },
   pages: true,
   modules: [
-    envModules.tokens,
-    envModules.studio,
+    '@nuxt-themes/tokens',
+    '@nuxthq/studio',
     '@nuxt/content',
-    updateModule as any
+    '@nuxtjs/seo',
+    'nuxt-icon'
+
   ],
   components: [
     { path: resolve('./components'), global: true },

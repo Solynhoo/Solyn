@@ -16,9 +16,9 @@ const alpine = useAppConfig().alpine
       <MainNav />
     </div>
 
-    <p v-if="alpine.footer?.message" class="message">
+    <i v-if="alpine.footer?.message" class="message">
       {{ alpine.footer.message }}
-    </p>
+    </i>
 
     <div class="icons">
       <div v-if="alpine.socials && Object.entries(alpine.socials)" class="social">

@@ -36,7 +36,6 @@ const getRel = (icon:any) => {
 </script>
 
 <template>
-  <!-- eslint-disable-next-line vue/no-multiple-template-root -->
   <NuxtLink
     v-for="icon in icons"
     :key="icon.label"
@@ -58,7 +57,6 @@ css({
     height: 'var(--social-icon-size)',
     display: 'flex',
     ':hover': {
-      // TODO: why prose links is not yellow, should be primary
       color: '{color.primary.500}',
     },
     svg: {
