@@ -4,7 +4,6 @@ import { $fetch } from 'ofetch'
 const { resolve } = createResolver(import.meta.url)
 
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -61,9 +60,6 @@ export default defineNuxtConfig({
   css: [
     resolve('./assets/main.css'),
   ],
-  colorMode: {
-    classSuffix: ''
-  },
   pinceau: {
     studio: true
   },
@@ -79,9 +75,6 @@ export default defineNuxtConfig({
       },
       preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp']
     }
-  },
-  experimental: {
-    inlineSSRStyles: false
   },
   typescript: {
     includeWorkspace: true

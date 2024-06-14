@@ -1,10 +1,9 @@
 export default defineAppConfig({
   alpine: {
-    title: 'Alpine',
-    description: 'The minimalist blog theme',
+    title: '🌱 Solyn',
+    description: '🌱 O meu site pessoal',
     image: {
-      src: '/social-card-preview.png',
-      alt: 'An image showcasing my project.',
+      src: '/assets/og.png',
       width: 400,
       height: 300
     },
@@ -13,32 +12,32 @@ export default defineAppConfig({
       logo: {
         path: '/assets/logo.webp',
         pathDark: '/assets/logo-dark.webp',
-        alt: 'solyn'
+        alt: 'Solyn'
       }
     },
     footer: {
       credits: {
         enabled: true,
-        text: 'Alpine',
-        repository: 'https://www.github.com/nuxt-themes/alpine'
+        text: 'Solyn',
+        repository: 'https://www.github.com/solynhoo/solyn'
       },
       navigation: true,
       alignment: 'center',
-      message: 'Follow me on'
+      message: "Despite Everything, It's Still You!"
     },
     socials: {
-      twitter: '',
-      instagram: '',
-      github: '',
+      twitter: 'Solynhoo',
+      instagram: 'Solynhoo',
+      github: 'Solynhoo',
       facebook: '',
       medium: '',
-      youtube: ''
+      youtube: 'Solynhoo'
     },
     form: {
-      successMessage: 'Message sent. Thank you!'
+      successMessage: '✉️ Mensagem enviada. Obrigado!'
     },
     backToTop: {
-      text: 'Back to top',
+      text: 'Voltar ao topo!',
       icon: 'material-symbols:arrow-upward'
     }
   }

@@ -1,13 +1,12 @@
 <template>
   <article ref="article">
-    <!-- TODO: could be refactored as a transparent ButtonLink -->
     <NuxtLink
       :to="parentPath"
       class="back"
     >
       <Icon name="ph:arrow-left" />
       <span>
-        Back
+        Voltar
       </span>
     </NuxtLink>
     <header>
@@ -32,7 +31,7 @@
         class="back-to-top"
       >
         <ProseA @click.prevent.stop="onBackToTop">
-          {{ alpine?.backToTop?.text || 'Back to top' }}
+          {{ alpine?.backToTop?.text || 'Voltar ao topo' }}
           <Icon :name="alpine?.backToTop?.icon || 'material-symbols:arrow-upward'" />
         </ProseA>
       </div>

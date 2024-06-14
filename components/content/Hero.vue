@@ -63,8 +63,9 @@ css({
         lineHeight: '{text.xl.lineHeight}',
       },
       img: {
+
         width: '100%',
-        aspectRatio: '16 / 9',
+        aspectRatio: '1 / 1',
         objectFit: 'cover',
         borderRadius: '50%',
         '&.left': {
