@@ -3,27 +3,25 @@ import { $fetch } from 'ofetch'
 
 const { resolve } = createResolver(import.meta.url)
 
-
 export default defineNuxtConfig({
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'pt'
-      }
-    }
-  },
   colorMode: {
     preference: 'system',
     fallback: 'dark'
   },
+  ogImage: {
+    defaults: {
+      emojis: 'twemoji'
+    }
+  },
   site: {
-    url: 'https://solyn.xyz',
+    url: 'http://localhost:3000',
     name: '🌱 Solyn',
     description: '🌱 O meu site pessoal!',
     defaultLocale: 'pt'
   },
   robots: {
-    disallow: ['/_src/', '/_nuxt/', '/_logs/', '/cdn-cgi/'],
+    allow: ['/blog', '/projetos'],
+    disallow: ['/_src/', '/_nuxt/', '/_logs/', '/cdn-cgi/', '/blog/*', '/projetos/*'],
     blockNonSeoBots: true,
     credits: false,
     debug: true,
@@ -34,7 +32,7 @@ export default defineNuxtConfig({
       type: 'Person',
       name: '🌱 Solyn',
       url: 'https://solyn.xyz',
-      logo: 'https://solyn.xyz/assets/avatar.png'
+      logo: 'https://solyn.xyz/assets/avatar.webp'
     }
   },
   extends: ['@nuxt-themes/typography', '@nuxt-themes/elements'],
