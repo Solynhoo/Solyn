@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'http://localhost:3000',
+    url: 'http://solyn.xyz',
     name: '🌱 Solyn',
     description: '🌱 O meu site pessoal!',
     defaultLocale: 'pt'
