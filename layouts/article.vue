@@ -16,14 +16,31 @@
       >
         {{ page.title }}
       </h1>
+      <p 
+        v-if="page?.description"
+        class="description"
+      > 
+      <Icon name="fluent:text-description-16-filled" /> {{ page.description }}
+    </p>
+
       <time
         v-if="page?.date"
         :datetime="page.date"
       >
-        {{ formatDate(page.date) }}
+      <Icon name="material-symbols:calendar-month-outline" /> {{ formatDate(page.date) }}
       </time>
     </header>
 
+    <div v-if="page.cover" class="image">
+      <NuxtLink :to="page._path">
+        <NuxtImg
+          :src="page.cover"
+          :alt="page.title"
+          width="16"
+          height="9"
+          />
+      </NuxtLink>
+    </div>
     <div class="prose">
       <slot />
       <div
@@ -34,6 +51,7 @@
           {{ alpine?.backToTop?.text || 'Voltar ao topo' }}
           <Icon :name="alpine?.backToTop?.icon || 'material-symbols:arrow-upward'" />
         </ProseA>
+      
       </div>
     </div>
   </article>
@@ -101,6 +119,19 @@ css({
       marginTop: '{space.16}',
       marginBottom: '{space.12}',
     },
+    img: {
+      width: '100%',
+      aspectRatio: '16 / 9',
+      objectFit: 'cover',
+      borderRadius: '{radii.md}',
+    },
+    '.description': {
+        marginBottom: '{space.4}',
+        lineClamp: 2,
+        '.featured &&': {
+          lineClamp: 4,
+        }
+      },
     '.title': {
       fontSize: '{text.5xl.fontSize}',
       lineHeight: '{text.5xl.lineHeight}',
