@@ -1,60 +1,98 @@
-[![Alpine](./.starters/default/public/social-card-preview.png)](https://alpine.nuxt.space)
+<p align="center"><img src="https://socialify.git.ci/Solynhoo/solyn/image?forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Diagonal%20Stripes&amp;pulls=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
-# Alpine
+<hr>
 
-[![npm version][npm-version-src]][npm-version-href]
-[![License][license-src]][license-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Nuxt][nuxt-src]][nuxt-href]
-[![Nuxt Studio][nuxt-studio-src]][nuxt-studio-href]
-[![Volta][volta-src]][volta-href]
+<h1 align="center" id="title">Solyn</h1>
+<h2 id="description" align="center">📚 || O meu site pessoal!</p>
 
-The minimalist blog theme, powered by [Nuxt](https://nuxt.com).
+<p align="center"><img src="https://img.shields.io/github/created-at/Solynhoo/Solyn" alt="shields"><img src="https://img.shields.io/github/last-commit/Solynhoo/Solyn" alt="shields"><img src="https://img.shields.io/github/last-commit/Solynhoo/Solyn" alt="shields"></p>
+
+<h2>🚀 Veja o site</h2>
+
+Caso você queira, você pode visitar o site na integra! **[https://solyn.xyz](https://solyn.xyz)**
+
+<h2>Captura do site:</h2>
+<p>Veja aqui como o site é em geral...</p>
+
+<img src="https://github.com/Solynhoo/Solyn/assets/150988637/dd3e4d3d-735e-4f84-b908-110c62fc6928" alt="project-screenshot" />
 
 
-- [📸 Online demo](https://alpine.nuxt.space)
-- [⚡️ Play on StackBlitz](https://stackblitz.com/github/nuxt-themes/alpine-starter)
+  
+  
+<h2>🧐 Funções</h2>
 
-## Features
+Aqui está algumas coisas que esse site consegue fazer:
 
-- Start from a **profile page**, scale to a **complete blog**!
-- An [open source blog theme](https://github.com/nuxt-themes/alpine) powered by [Nuxt Content](https://content.nuxtjs.org), editable from [Nuxt Studio](https://nuxt.studio).
-- Write pages in Markdown and Vue components with the [MDC syntax](https://content.nuxtjs.org/guide/writing/mdc).
-- Use [**30+ built-in**](https://elements.nuxt.space) components in your Markdown pages.
+*   1️⃣ Um blog
+*   2️⃣ Uma página de contato
+*   3️⃣ Uma página introdutoria
+*   4️⃣ Uma página de projetos
 
-## Quick Start
+<h2>🛠️ Passos para instalação:</h2>
 
-```bash
+<h3> Localmente </h3>
+
+> [!IMPORTANT]  
+> Para fazer esse passo você precisa de ter Node Package Execute instalado no seu sistema, para isso você precisa de instalar o **NPM** alternativamente você pode usar o Bunx, que vem ao instalar o [Bun](https://bun.sh)
+
+<p>1️. Execute esse código no seu terminal</p>
+
+```
 npx nuxi@latest init -t themes/alpine
 ```
 
-## Contributing 🙏
+<b>📚E pronto!<br> Agora você tem o projeto em mãos. <br> Agora você está livre para editar o código e fazer a sua propria página.</b>
 
-1. Clone this repository
-2. Install dependencies using `pnpm install`
-3. Run `pnpm prepare` to generate type stubs.
-4. Use `pnpm dev` to start [playground](./playground) in development mode.
+<p>2. Dependendo do package manager que você escolheu, você pode rodar o seu projeto na sua maquina, usando os seguintes comandos:</p>
 
-## License
+<b> npm:</b>
 
-[MIT](./LICENSE)
+```
+npm run dev
+```
 
-<!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@nuxt-themes/alpine/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/@nuxt-themes/alpine
+<b> pnpm </b>
 
-[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxt-themes/alpine.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/@nuxt-themes/alpine
+```
+pnpm run dev
+```
 
-[license-src]: https://img.shields.io/github/license/nuxt-themes/alpine.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://github.com/nuxt-themes/alpine/blob/main/LICENSE
+<b> yarn </b>
+
+```
+yarn run dev
+```
+
+<b> Bun </b>
+
+```
+bun run dev
+```
+
+<h3> Online </h3>
+
+Você pode usar a **Vercel** para rapidamente colocar o seu projeto online num site, para isso, é so clicar nesse botão e seguir os passos no site da **Vercel**!
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsolynhoo%2Fsolyn&env=FORMSPREE_URL&envDescription=O%20FORMSPREE_URL%20%C3%A9%20usado%20no%20formulario%20de%20contato&envLink=https%3A%2F%2Fformspree.io%2F)
 
 
-[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?&logo=nuxt.js
-[nuxt-href]: https://nuxt.com
+<h2>🍰 Regras de contribuição :</h2>
 
-[nuxt-studio-src]: https://img.shields.io/badge/Open%20in%20Nuxt%20Studio-18181B?&logo=nuxt.js&logoColor=3BB5EC
-[nuxt-studio-href]: https://nuxt.studio/themes/alpine
+Caso você queira sugerir mudanças de texto sugiro você abrir um Issue ou um Pull request, descrevendo o problema de texto (gramatical) ou a sugestão de um novo texto, o mesmo se aplica a **correção de código** sugerindo alguma mudança
 
-[volta-src]: https://user-images.githubusercontent.com/904724/209143798-32345f6c-3cf8-4e06-9659-f4ace4a6acde.svg
-[volta-href]: https://volta.net/nuxt-themes/alpine?utm_source=readme_alpine
+  
+  
+<h2>💻 Feito com...</h2>
+
+Tecnologias usadas no nosso projeto
+
+*   Nuxt
+  *  Nuxt Icons
+  *  Nuxt SEO
+  *  Nuxt Studio
+*   Vue
+*   Vite
+
+<h2>🛡️ License:</h2>
+
+Este projeto está licenciado pela licença MIT, este projeto é um fork do tema **Nuxt** [Alpine](https://github.com/nuxt-themes/alpine) licensiado pela **NuxtLabs SAS**

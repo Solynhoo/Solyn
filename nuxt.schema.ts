@@ -11,13 +11,13 @@ export default defineNuxtSchema({
        *
        * @studioIcon material-symbols:title
        */
-      title: 'Alpine',
+      title: '🌱 Solyn',
       /**
        * Website description, used for meta description.
        *
        * @studioIcon material-symbols:description
        */
-      description: 'The minimalist blog theme',
+      description: '🌱 O meu site pessoal',
       /**
        * Cover image.
        *
@@ -31,8 +31,7 @@ export default defineNuxtSchema({
          * @studioIcon dashicons:cover-image
          * @studioInput file
          */
-        src: '/social-card-preview.png',
-        alt: 'An image showcasing my project.',
+        src: '/assets/og.png',
         width: 400,
         height: 300
       },
@@ -60,7 +59,7 @@ export default defineNuxtSchema({
            * @studioIcon dashicons:cover-image
            * @studioInput file
            */
-          path: '/logo.svg',
+          path: '/assets/logo.webp',
           /**
            * Path of the logo in dark mode.
            *
@@ -69,11 +68,10 @@ export default defineNuxtSchema({
            * @studioIcon dashicons:cover-image
            * @studioInput file
            */
-          pathDark: '/logo-dark.svg',
+          pathDark: '/assets/logo-dark.webp',
           /**
            * Alt description for the image.
            */
-          alt: 'Alpine theme logo'
         }
       },
       /**
@@ -93,11 +91,11 @@ export default defineNuxtSchema({
           /**
            * Text to be displayed.
            */
-          text: 'Alpine',
+          text: 'Solyn',
           /**
            * GitHub repository link.
            */
-          repository: 'https://www.github.com/nuxt-themes/alpine'
+          repository: 'https://www.github.com/solynhoo/solyn'
         },
         /**
          * Toggle the navigation.
@@ -114,7 +112,7 @@ export default defineNuxtSchema({
          *
          * Leave it empty to disable.
          */
-        message: 'Follow me on'
+        message: "Despite Everything, It's Still You!"
       },
       /**
        * Icons to be added to Social Icons in footer.
@@ -127,25 +125,25 @@ export default defineNuxtSchema({
          * @example 'nuxt_js'
          * @studioIcon simple-icons:twitter
          */
-        twitter: '',
+        twitter: 'solynhoo',
         /**
          * Instagram handle
          * @example 'wearenuxt'
          * @studioIcon simple-icons:instagram
          */
-        instagram: '',
+        instagram: 'solynhoo',
         /**
          * GitHub path
          * @example 'nuxt-themes/alpine'
          * @studioIcon simple-icons:github
          */
-        github: '',
+        github: 'solynhoo',
         /**
          * GitHub path
          * @example 'nuxt'
          * @studioIcon simple-icons:facebook
          */
-        facebook: '',
+        facebook: 'solynhoo',
         /**
          * Medium handle
          * @example 'nuxt'
@@ -157,7 +155,7 @@ export default defineNuxtSchema({
          * @example '@nuxtlabs'
          * @studioIcon simple-icons:youtube
          */
-        youtube: ''
+        youtube: 'solynhoo'
       },
       /**
        * Contact form configuration.
@@ -168,7 +166,7 @@ export default defineNuxtSchema({
         /**
          * Success message.
          */
-        successMessage: 'Message sent. Thank you!'
+        successMessage: '✉️ Mensagem enviada. Obrigado!'
       },
       /**
        * Back to top button configuration.
@@ -177,7 +175,7 @@ export default defineNuxtSchema({
        */
       backToTop: {
         icon: 'material-symbols:arrow-upward',
-        text: 'Back to top',
+        text: 'Voltar ao topo',
       }
     }
   }

@@ -25,7 +25,6 @@ const props = defineProps({
 })
 
 const id = computed(() => {
-  // @ts-ignore
   return (process.dev || useContentPreview()?.isEnabled()) ? props.article?._id : undefined
 })
 </script>
@@ -64,16 +63,16 @@ const id = computed(() => {
         :to="article._path"
         class="headline"
       >
-        <h1>
-          {{ article.title }}
+      <h1>
+        {{ article.title }}
         </h1>
       </NuxtLink>
 
       <p class="description">
-        {{ article.description }}
+        <Icon name="fluent:text-description-16-filled" /> {{ article.description }}
       </p>
       <time>
-        {{ formatDate(article.date) }}
+        <Icon name="material-symbols:calendar-month-outline" /> {{ formatDate(article.date) }}
       </time>
     </div>
   </article>

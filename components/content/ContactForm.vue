@@ -6,7 +6,7 @@ const alpine = useAppConfig().alpine
 const { FORMSPREE_URL } = useRuntimeConfig().public
 
 if (!FORMSPREE_URL) {
-  console.warn('No FORMSPREE_URL provided')
+  console.warn('❌ Nenhum token "FORMSPREE_URL" foi dado, o formulário NÃO vai funcionar!')
 }
 
 const status = ref()
@@ -14,7 +14,7 @@ const status = ref()
 const props = defineProps({
   submitButtonText: {
     type: String,
-    default: 'Send message'
+    default: '✉️ Enviar mensagem'
   },
   fields: {
     type: Array as PropType<Field[]>,
@@ -22,8 +22,8 @@ const props = defineProps({
       {
         type: 'text',
         model: 'name',
-        name: 'Name',
-        placeholder: 'Your name',
+        name: 'Nome',
+        placeholder: 'Seu nome...',
         required: true,
         layout: 'default'
       },
@@ -31,22 +31,22 @@ const props = defineProps({
         type: 'email',
         model: 'email',
         name: 'Email',
-        placeholder: 'Your email',
+        placeholder: 'Seu e-mail...',
         required: true,
         layout: 'default'
       },
       {
         type: 'text',
         model: 'text',
-        name: 'Subject',
+        name: 'Assunto',
         required: false,
         layout: 'default'
       },
       {
         type: 'textarea',
         model: 'message',
-        name: 'Message',
-        placeholder: 'Your message',
+        name: 'Mensagem',
+        placeholder: 'Sua mensagem...',
         required: true,
         layout: 'big'
       }
@@ -60,7 +60,7 @@ const onSend = async (e: any) => {
   e.preventDefault()
   const data = new FormData(e.target)
 
-  status.value = 'Sending...'
+  status.value = 'Enviando...'
 
   fetch(e.target.action, {
     method: e.target.method,
@@ -79,16 +79,16 @@ const onSend = async (e: any) => {
           status.value = data["errors"][0].message
           console.error(data["errors"].map((error: any) => error["message"]).join(", "))
           setTimeout(() => {
-            status.value = 'Send message'
+            status.value = 'Enviar mensagem'
           }, 2000)
         } else {
-          console.error("There was a problem submitting your form")
+          console.error("Houve um problema enviando seu formulário! Caso esse problema persista contate uranink@solyn.xyz ou abra um issue no Github!")
         }
       })
     }
   }).catch(() => {
     // Catch all other errors
-    console.error("There was a problem submitting your form")
+    console.error("Houve um problema enviando seu formulário! Caso esse problema persista contate uranink@solyn.xyz ou abra um issue no Github!")
   })
 }
 

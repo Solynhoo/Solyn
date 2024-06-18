@@ -71,7 +71,7 @@ function startTimer () {
   }, 100)
 }
 
-// Hooks
+
 nuxtApp.hook('content:middleware:start', start)
 nuxtApp.hook('page:start', start)
 nuxtApp.hook('page:finish', finish)

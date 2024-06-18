@@ -6,7 +6,7 @@ defineProps({
   },
   imageAlt: {
     type: String,
-    default: 'Hero Image'
+    default: '🖼️ Imagem'
   },
   imagePosition: {
     type: String,
@@ -21,12 +21,12 @@ defineProps({
       <div class="content">
         <div class="title">
           <ContentSlot :use="$slots.title" unwrap="p">
-            Hero title
+            📋 Título
           </ContentSlot>
         </div>
         <div class="description">
           <ContentSlot :use="$slots.description" unwrap="p">
-            Hero description
+            ✉️ Descrição
           </ContentSlot>
         </div>
       </div>
@@ -63,10 +63,11 @@ css({
         lineHeight: '{text.xl.lineHeight}',
       },
       img: {
+
         width: '100%',
-        aspectRatio: '16 / 9',
+        aspectRatio: '1 / 1',
         objectFit: 'cover',
-        borderRadius: '{radii.md}',
+        borderRadius: '50%',
         '&.left': {
           order: -1
         }

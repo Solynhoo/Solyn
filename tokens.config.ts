@@ -4,7 +4,7 @@ import { defineTheme } from 'pinceau'
 export default defineTheme({
   alpine: {
     $schema: {
-      title: 'All the configurable tokens from Alpine.',
+      title: '📋 Todos os tokens de configuração',
       tags: [
         '@studio-icon carbon:blog'
       ]
